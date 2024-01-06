@@ -93,6 +93,8 @@
 
 
     function getAdvice() {
+      document.querySelector('.dice svg').classList.add('rotate');
+
       fetch('https://api.adviceslip.com/advice').then(response => {
         return response.json();
       }).then(adviceData => {
@@ -100,9 +102,13 @@
         const advice = adviceData.slip.advice;
         adviceId.textContent = adviceIdd;
         adviceText.innerHTML = `&ldquo;${advice}&rdquo;`;
+        document.querySelector('.dice svg').classList.remove('rotate');
+
       }).catch(error => {
         console.log(error);
+        document.querySelector('.dice svg').classList.remove('rotate');
       })
+
     }
 
     btn.addEventListener('click', () => {

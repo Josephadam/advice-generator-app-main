@@ -53,6 +53,20 @@ main {
     box-shadow: 1px 4px 15px 0px hsla(150, 100%, 66%, 0.47), 0px 6px 20px 10px hsla(150, 100%, 66%, 0.61); /* Adjust values as needed */
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(420deg);
+  }
+}
+
+/* Add a class for animating the SVG */
+.rotate {
+  animation: rotate 0.9s infinite linear;
+}
+
 
 
 
